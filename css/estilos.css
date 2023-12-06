@@ -16,7 +16,7 @@ body {
     box-sizing: border-box;
     padding: 0 10px;
 }   
-.veni {
+h1 {
     font-family: 'Poppins', sans-serif;    
     all: unset;
     font-weight: 800; 
@@ -49,6 +49,7 @@ body {
 legend {
     font-family: 'Roboto', sans-serif;
     color: white;
+    font-weight: bold;
     background-color: #4D6D63;
     border: 1px solid #4D6D63;
     border-radius:5px;
@@ -106,7 +107,6 @@ form label {
     margin-top: 10px;
     color: black;
 }
-
 input:focus, select:focus, textarea:focus {
     background-color: #4D6D63; 
     color: white; 
@@ -122,7 +122,7 @@ textarea[id="informacion"] {
     border: 1px solid #4D6D63;
     box-sizing: border-box;
     text-align: right;
-    color: grey;
+    color: #4D6D63;;
     background-color: white;
     transition: background-color 0.3s; 
 }
@@ -132,6 +132,9 @@ input[type="email"]:focus,
 textarea[id="informacion"]:focus {
     background-color: #4D6D63;
     color: white;
+}
+input[type="tel"]::placeholder, input[type="email"]::placeholder {
+    color: #6a9688; /* Cambiado a tu color deseado para el placeholder */
 }
 select[id="nacionalidad"]{
     width: 80%;
@@ -148,6 +151,8 @@ select[id="nacionalidad"]{
 select[id="nacionalidad"]:focus {
     color: #4D6D63;
 }
+
+
 input[type="checkbox"] + label {
     display: inline-block;
     position: relative;
@@ -216,7 +221,7 @@ textarea[id="informacion"] {
 button {
     padding: 10px;
     background-color: #2B3D37;
-    color: #D5E1DE;
+    color: #6a9688;
     border-radius: 3px;
     border: 1px solid #455b53;
 }
