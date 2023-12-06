@@ -1,0 +1,226 @@
+body {
+    font-family: 'Roboto', sans-serif;   
+    background-color: #212023;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+} 
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    min-width: 420px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}   
+.veni {
+    font-family: 'Poppins', sans-serif;    
+    all: unset;
+    font-weight: 800; 
+    font-size: 42px;
+    margin: 0;
+}
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.trapecioinv, .trapecio {
+    max-width: 580px;
+    min-width: 400px;
+    width: 92%;
+    box-sizing: border-box;
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent;
+}
+.trapecioinv {
+    border-top: 15px solid #4D6D63; 
+    margin: 20px 0 5px 0;
+}
+.trapecio {
+    border-bottom: 15px solid #4D6D63;
+    margin: 5px 0 20px 0;
+}
+legend {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #4D6D63;
+    border: 1px solid #4D6D63;
+    border-radius:5px;
+    padding: 8px 8px !important;
+}
+.fieldset-common  {
+    background-color: #D5E1DE;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 5px 0 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius:5px ;
+    border: 1px solid #4D6D63;
+}
+.fieldset-common:focus-within legend {
+    background-color: #2B3D37;
+    border: 1px solid #2B3D37;
+
+}
+.fieldset-common:focus-within {
+    background-color: #A4BEB8;
+}
+fieldset p {
+    color: black;
+}
+.contenedor-circulos {
+    display: flex;
+    margin: 15px 0;
+}
+.circulo {
+    width: 10px;
+    height: 10px;
+    background-color: #D5E1DE;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; 
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;    
+    box-sizing: border-box;
+    padding: 0 10px; 
+    max-width: 600px; 
+    margin: auto;
+}
+form label {
+    margin-bottom: 15px;    
+    margin-top: 10px;
+    color: black;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #4D6D63; 
+    color: white; 
+}
+input[type="text"], 
+input[type="tel"], 
+input[type="email"], 
+textarea[id="informacion"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:3px;
+    border: 1px solid #4D6D63;
+    box-sizing: border-box;
+    text-align: right;
+    color: grey;
+    background-color: white;
+    transition: background-color 0.3s; 
+}
+input[type="text"]:focus, 
+input[type="tel"]:focus, 
+input[type="email"]:focus, 
+textarea[id="informacion"]:focus {
+    background-color: #4D6D63;
+    color: white;
+}
+select[id="nacionalidad"]{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:5px ;
+    border: 1px solid #4D6D63;
+    box-sizing: border-box;
+    text-align: left;
+    color: #4D6D63;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+select[id="nacionalidad"]:focus {
+    color: #4D6D63;
+}
+input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+textarea[id="informacion"] {
+    resize: vertical;
+    transition: background-color 0.3s;
+}
+.contacto {
+    background-color: #D5E1DE;
+}
+.actividades {
+    background-color: #D5E1DE;
+    justify-content: left;    
+    text-align: left;
+    align-self: flex-start; 
+    transition: background-color 0.3s; 
+}
+.actividades:focus-within {
+    background-color: #A4BEB8;
+}
+.sexo {
+    margin: 5px 0 15px 0;
+}
+.porfavor {
+    margin-top: 20px;
+    font-size: 12px;
+}
+.aceptarcondiciones {
+    margin-top: 30px;
+    min-width: 440px;
+    max-width: 600px; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    color: white;
+    box-sizing: border-box;
+    padding: 0 5px; 
+}
+#condiciones, #novedades {
+    color: white;
+}
+.aceptarcondiciones label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px; 
+    color: white;
+    padding: 0px; 
+}
+.aceptarcondiciones p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.botones {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;   
+    margin-bottom: 40px;
+    border-radius: 3px;
+}
+button {
+    padding: 10px;
+    background-color: #2B3D37;
+    color: #D5E1DE;
+    border-radius: 3px;
+    border: 1px solid #455b53;
+}
+button:hover {
+            background-color: #D5E1DE;
+            color: black;
+}
