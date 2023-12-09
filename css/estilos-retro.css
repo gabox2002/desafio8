@@ -1,3 +1,157 @@
+/* Paleta de colores 
+#CB997E Buff
+#DDBEA9 Desert sand
+#FFE8D6 Champagne pink
+#B7B7A4 Ash gray
+#A5A58D Sage
+#6B705C Reseda green
+*/
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Berkshire+Swash&display=swap');
 body {
-    background-color: bisque;
+    font-family: 'Aladin', sans-serif;
+    color: #6B705C; 
+    margin: 0;
+}
+.titulo {
+    background-image: url('../image/tituto_egipcio.jpg');
+    background-position: 50%;
+    background-repeat: repeat-x;
+    background-size: 520px 180px;
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+.titulo h1 {
+    font-size: 2.5em;
+    margin: 0 0 0px 0;
+    color: #6B705C; 
+}
+.titulo span {
+    font-size: 1em;
+}
+.container {
+    gap: 20px; 
+    background-color: #DDBEA9;
+    padding: 20px 40px 10px 40px;
+    columns: 250px 2;
+    background-image: url('../image/fondo_egipcio.jpg');
+    background-repeat: repeat;
+    justify-content: space-between; 
+}
+fieldset {
+    border: 2px solid #A5A58D; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.fieldset-common  {
+    background-color: #FFE8D6;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    min-height: auto;
+    max-width: 100%; 
+    box-sizing: border-box;
+    border-radius:5px ;
+    border: 3px outset grey;
+}
+legend {
+    font-family: 'Berkshire Swash', sans-serif;
+    color: white; 
+    background-color: #A5A58D;
+    border: 3px inset grey;
+    border-radius:5px;
+}
+label {
+    color: #CB997E; 
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select[id="nacionalidad"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #A5A58D; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+textarea {
+    resize: vertical;
+}
+.sexo {
+    margin: 10px 0;
+}
+.sexo input,
+.sexo label {
+    display: inline-block;
+}
+.sexo label {
+    margin-right: 10px;
+}
+.contenedor-circulos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+.circulo {
+    width: 0px; 
+    height: 0px; 
+    margin-bottom: 0px; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #CB997E;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    display: inline-block;
+}
+.actividades {
+    justify-content: left;    
+    text-align: left;
+    align-self: flex-start; 
+}
+.actividades p {
+    color: #CB997E;
+}
+.porfavor {
+    color: #6B705C; 
+    margin-top: 0px;
+    font-size: 13px;
+}
+.aceptarcondiciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #FFE8D6;
+    color: #CB997E;
+    border-radius:5px ;
+    border: 3px outset grey;
+    padding: 10px; 
+    margin-top: 20px;
+}
+.botones {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;   
+    border-radius: 3px;
+}
+button {
+    font-family: 'Berkshire Swash', sans-serif;
+
+    padding: 10px;
+    background-color: #6B705C;
+    color: lightgrey;
+    border-radius: 3px;
+    border: 3px groove #455b53;
+}
+button:hover {
+    background-color: #B7B7A4;
+    color: #6B705C;
 }
