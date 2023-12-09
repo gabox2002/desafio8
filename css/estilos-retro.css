@@ -16,24 +16,25 @@ body {
     background-image: url('../image/tituto_egipcio.jpg');
     background-position: 50%;
     background-repeat: repeat-x;
-    background-size: 520px 180px;
-    padding-bottom: 30px;
+    background-size: 550px 160px;
+    padding-bottom: 50px;
     text-align: center;
     position: relative;
 }
 .titulo h1 {
     font-size: 2.5em;
-    margin: 0 0 0px 0;
+    margin: 10px 0 0 0;
     color: #6B705C; 
 }
 .titulo span {
     font-size: 1em;
 }
 .container {
-    gap: 20px; 
+    gap: 40px; 
     background-color: #DDBEA9;
-    padding: 20px 40px 10px 40px;
-    columns: 250px 2;
+    padding: 60px 40px 0px 40px;
+    columns: 240px 2;
+    min-height: 100vh;
     background-image: url('../image/fondo_egipcio.jpg');
     background-repeat: repeat;
     justify-content: space-between; 
