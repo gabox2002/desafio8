@@ -76,11 +76,11 @@ fieldset {
 }
 legend {
     font-family: 'Berkshire Swash', sans-serif;
-    color: white; 
+    color: white !important; 
     background-color: #A5A58D;
     border: 3px inset darkgrey;
     border-radius:5px;
-    box-shadow: 0 0 20px #000000;
+    box-shadow: 0 0 2px #000000;
     padding: 6px;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
