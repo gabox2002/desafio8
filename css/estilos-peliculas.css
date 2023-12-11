@@ -1,7 +1,283 @@
-/* paleta de colores
-#E63946 Red (Pantone)
-#F1FAEE Honeydew
-#A8DADC Non Photo blue
-#457B9D Cerulean
-#1D3557 Berkeley Blue
+/* Paleta de colores:
+#5A94C5 Celestial Blue
+#B4CDF6 Powder blue
+#2B2D42 Space cadet
+#F8F32B Aureolin
 */
+@import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
+@font-face {
+    font-family: "MiFuente"; 
+    src: url("../image/Pokemon\ Solid.ttf") format("truetype"); 
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Laila', serif;                
+    background-image: url("../image/pokemones.jpg");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.titulo {
+    text-align: center;
+    background-color: #f8f32b;
+    color: #5a94c5;
+}
+.titulo h1 {
+    font-family: "MiFuente", sans-serif;
+    font-weight: lighter;
+    font-size: x-large;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.botones {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-radius: 3px;
+}
+button {
+    color: #f8f32b;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #5a94c5;
+    text-shadow: 2px 2px 2px rgb(82, 82, 82);
+    background: linear-gradient(to left, #2b2d42 50%, #b4cdf6 50%) right;
+    background-size: 200%;
+    transition: background-position 0.5s;
+    border-radius: 40px;
+    text-shadow: 2px 2px 2px #000000;
+}
+button:hover {
+    background-color: #5a94c5;
+    color: #5a94c5;
+    background-position: left;
+    border: 1px solid #000000;
+}
+.figuras-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.figura,
+.figurainv {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+.figura {
+    margin-left: 60%;
+    margin-top: -50px;
+}
+.figurainv {
+    margin-right: 60%;
+    margin-top: -50px;
+}
+.figura::before,
+.figurainv::before {
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #ff0303;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.figura_detalle,
+.figurainv_detalle {
+    width: 80px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 40px;
+    position: absolute;
+}
+.figura_detalle::before,
+.figurainv_detalle::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: 25px;
+}
+.figura_detalle::after,
+.figurainv_detalle::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: 33px;
+}
+.container {
+    background-color: #000000;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    min-width: 420px;
+    padding: 0 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    max-width: 600px;
+    margin: auto;
+}
+form label {
+    color: black;
+}
+.sexo {
+    margin: 5px 0 15px 0;
+}
+.fieldset-common {
+    background-image: url("../image/pokemon.jpg");
+    background-size: 200%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #f8f32b;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px #B4CDF6;
+}
+.fieldset-common:focus-within legend {
+    background-color: #B4CDF6;
+    border: 1px solid #2B2D42;
+    color: #f8f32b;
+}
+.fieldset-common legend {
+    font-family: "MiFuente", sans-serif;
+    background-color: #2B2D42;
+    color: #5a94c5;
+    font-weight: lighter;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    border: 3px ridge #f8f32b;
+    border-radius: 20px;
+    padding:  0 6px 8px 6px;
+}
+fieldset.contacto {
+    border-color: #f8f32b;
+    background-image: url("../image/pokemon3.jpg");
+    background-size: cover;
+    box-shadow: 0 0 20px #B4CDF6;
+}
+fieldset.actividades {
+    border-color: #f8f32b;
+    background-image: url("../image/pokemonrun.jpg");
+    background-size: cover;
+    box-shadow: 0 0 20px #B4CDF6;
+}
+.actividades {
+    padding: 0 20px 10px 20px;
+    align-self: flex-start;
+    color: #000000;
+}
+.actividades p {
+    font-weight: bold;
+    margin: 20px 0;
+    color: #000000;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select[id="nacionalidad"],
+textarea {
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #B4CDF6; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="text"]:focus, 
+input[type="tel"]:focus, 
+input[type="email"]:focus, 
+textarea[id="informacion"]:focus {
+    background-color: #2B2D42;
+    color: white;
+}
+select[id="nacionalidad"]{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:5px ;
+    border: 1px solid #B4CDF6;
+    box-sizing: border-box;
+    text-align: left;
+    color: #949494;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+select[id="nacionalidad"]:focus {
+    color: #2B2D42;
+}
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.aceptarcondiciones {
+    margin-top: 30px;
+    margin-left: 20px;
+    min-width: 440px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    width: 100%;
+}
+.aceptarcondiciones p {
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.aceptarcondiciones label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0px;
+    color: #ffffff;
+}
+textarea[id="informacion"] {
+    resize: vertical;
+    transition: background-color 0.3s;
+}
+.contenedor-circulos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+.circulo {
+    width: 30px;
+    height: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../image/pikachu.gif");
+}

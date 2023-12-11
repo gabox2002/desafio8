@@ -1,4 +1,4 @@
-/* Paleta de colores 
+/* Paleta de colores:
 #CB997E Buff
 #DDBEA9 Desert sand
 #FFE8D6 Champagne pink
@@ -11,6 +11,9 @@ body {
     font-family: 'Aladin', sans-serif;
     color: #6B705C; 
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
 .titulo {
     background-image: url('../image/tituto_egipcio.jpg');
@@ -20,11 +23,14 @@ body {
     padding-bottom: 50px;
     text-align: center;
     position: relative;
+    border-bottom: 4px solid #000000; 
+    width: 100%;
 }
 .titulo h1 {
     font-size: 2.5em;
     margin: 10px 0 0 0;
     color: #6B705C; 
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 .titulo span {
     font-size: 1em;
@@ -44,6 +50,7 @@ fieldset {
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 20px;
+    box-shadow: 0 0 20px #000000;
 }
 .fieldset-common  {
     background-color: #FFE8D6;
@@ -59,28 +66,58 @@ fieldset {
     box-sizing: border-box;
     border-radius:5px ;
     border: 3px outset grey;
+    background-image: url("../image/fondo_egipcio2.jpg");
+    background-size: cover;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.fieldset-common:focus-within legend {
+    background-color: #6B705C;
+    border: 1px solid #2B3D37;
 }
 legend {
     font-family: 'Berkshire Swash', sans-serif;
     color: white; 
     background-color: #A5A58D;
-    border: 3px inset grey;
+    border: 3px inset darkgrey;
     border-radius:5px;
+    box-shadow: 0 0 20px #000000;
+    padding: 6px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 label {
-    color: #CB997E; 
+    color: #FFE8D6; 
 }
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 select[id="nacionalidad"],
 textarea {
-    width: 100%;
     padding: 10px;
     margin: 5px 0 15px 0;
-    border: 1px solid #A5A58D; 
+    border: 3px solid #A5A58D; 
     border-radius: 5px;
+    box-shadow: 10px 10px 20px #000000;
+}
+input[type="text"]:focus, 
+input[type="tel"]:focus, 
+input[type="email"]:focus, 
+textarea[id="informacion"]:focus {
+    background-color: #A5A58D;
+    color: white;
+}
+select[id="nacionalidad"]{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:5px ;
+    border: 3px solid #A5A58D;
     box-sizing: border-box;
+    text-align: left;
+    color: #A5A58D;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+select[id="nacionalidad"]:focus {
+    color: #A5A58D;
 }
 textarea {
     resize: vertical;
@@ -108,9 +145,13 @@ textarea {
     margin-bottom: 0px; 
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 20px solid #CB997E;
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    border-bottom: 20px solid #000000;
     display: inline-block;
+    animation: 3s infinite anim-div;
+}
+@keyframes anim-div {
+   0% {transform: rotateZ(0);} 
+   100% {transform: rotateZ(360deg);}
 }
 .actividades {
     justify-content: left;    
@@ -118,10 +159,9 @@ textarea {
     align-self: flex-start; 
 }
 .actividades p {
-    color: #CB997E;
+    color: #FFE8D6;
 }
 .porfavor {
-    color: #6B705C; 
     margin-top: 0px;
     font-size: 13px;
 }
@@ -130,11 +170,13 @@ textarea {
     flex-direction: column;
     justify-content: flex-start;
     background-color: #FFE8D6;
-    color: #CB997E;
+    color: #FFE8D6;
     border-radius:5px ;
     border: 3px outset grey;
     padding: 10px; 
     margin-top: 20px;
+    box-shadow: 0 0 20px #000000;
+    background-image: url("../image/fondo_egipcio2.jpg");
 }
 .botones {
     display: flex;
@@ -145,14 +187,22 @@ textarea {
 }
 button {
     font-family: 'Berkshire Swash', sans-serif;
-
     padding: 10px;
     background-color: #6B705C;
-    color: lightgrey;
+    color: white;
     border-radius: 3px;
     border: 3px groove #455b53;
+    text-shadow: 2px 2px 2px rgb(82, 82, 82);
+    background: linear-gradient(to right, #2B2D42 50%, #6B705C 50%) left;
+    background-size: 200%;
+    transition: background-position 0.5s;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+
 }
 button:hover {
     background-color: #B7B7A4;
-    color: #6B705C;
+    color: black;
+    background-position: right;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+
 }
